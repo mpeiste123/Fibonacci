@@ -1,0 +1,9 @@
+C:\Users\adels\source\repos\WebSite1\FibonacciClient\bin\Debug\FibonacciClient.exe.config
+C:\Users\adels\source\repos\WebSite1\FibonacciClient\bin\Debug\FibonacciClient.exe
+C:\Users\adels\source\repos\WebSite1\FibonacciClient\bin\Debug\FibonacciClient.pdb
+C:\Users\adels\source\repos\WebSite1\FibonacciClient\obj\Debug\FibonacciClient.csprojResolveAssemblyReference.cache
+C:\Users\adels\source\repos\WebSite1\FibonacciClient\obj\Debug\FibonacciClient.csproj.CoreCompileInputs.cache
+C:\Users\adels\source\repos\WebSite1\FibonacciClient\obj\Debug\FibonacciClient.exe
+C:\Users\adels\source\repos\WebSite1\FibonacciClient\obj\Debug\FibonacciClient.pdb
+C:\Users\adels\source\repos\WebSite1\FibonacciClient\bin\Debug\log4net.dll
+C:\Users\adels\source\repos\WebSite1\FibonacciClient\bin\Debug\log4net.xml

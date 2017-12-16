@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="FibonacciSeries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="n" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FibonacciSeriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FibonacciSeriesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertXmlToJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertXmlToJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConvertXmlToJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FibonacciSeriesSoapIn">
+    <wsdl:part name="parameters" element="tns:FibonacciSeries" />
+  </wsdl:message>
+  <wsdl:message name="FibonacciSeriesSoapOut">
+    <wsdl:part name="parameters" element="tns:FibonacciSeriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvertXmlToJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvertXmlToJson" />
+  </wsdl:message>
+  <wsdl:message name="ConvertXmlToJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertXmlToJsonResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FibonacciSoap">
+    <wsdl:operation name="FibonacciSeries">
+      <wsdl:input message="tns:FibonacciSeriesSoapIn" />
+      <wsdl:output message="tns:FibonacciSeriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertXmlToJson">
+      <wsdl:input message="tns:ConvertXmlToJsonSoapIn" />
+      <wsdl:output message="tns:ConvertXmlToJsonSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FibonacciSoap" type="tns:FibonacciSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FibonacciSeries">
+      <soap:operation soapAction="http://tempuri.org/FibonacciSeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertXmlToJson">
+      <soap:operation soapAction="http://tempuri.org/ConvertXmlToJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FibonacciSoap12" type="tns:FibonacciSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FibonacciSeries">
+      <soap12:operation soapAction="http://tempuri.org/FibonacciSeries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertXmlToJson">
+      <soap12:operation soapAction="http://tempuri.org/ConvertXmlToJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Fibonacci">
+    <wsdl:port name="FibonacciSoap" binding="tns:FibonacciSoap">
+      <soap:address location="http://localhost:60019/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FibonacciSoap12" binding="tns:FibonacciSoap12">
+      <soap12:address location="http://localhost:60019/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

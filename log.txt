@@ -1,0 +1,15 @@
+256 [1] DEBUG FibonacciClient.Program - Debug Message
+356 [1] INFO FibonacciClient.Program - Info Message
+357 [1] WARN FibonacciClient.Program - Warn Message
+359 [1] ERROR FibonacciClient.Program - Error Message
+360 [1] FATAL FibonacciClient.Program - Fatal Message
+255 [1] DEBUG FibonacciClient.Program - Debug Message
+302 [1] INFO FibonacciClient.Program - Info Message
+317 [1] WARN FibonacciClient.Program - Warn Message
+317 [1] ERROR FibonacciClient.Program - Error Message
+317 [1] FATAL FibonacciClient.Program - Fatal Message
+318 [1] DEBUG FibonacciClient.Program - Debug Message
+397 [1] INFO FibonacciClient.Program - Info Message
+399 [1] WARN FibonacciClient.Program - Warn Message
+401 [1] ERROR FibonacciClient.Program - Error Message
+403 [1] FATAL FibonacciClient.Program - Fatal Message
